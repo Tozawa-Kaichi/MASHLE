@@ -5,6 +5,7 @@ using UnityEngine;
 /// 生成されたステージの動作を管理するスクリプト
 /// 横に流れる水のように
 /// </summary>
+[RequireComponent(typeof(Rigidbody))]
 public class StageController : MonoBehaviour
 {
     [Header("この部分を過ぎたら消滅するというX座標の値を調節してください"), Tooltip("ステージが消滅する座標"), SerializeField]
