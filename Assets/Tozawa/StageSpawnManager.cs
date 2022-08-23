@@ -14,15 +14,11 @@ public class StageSpawnManager : MonoBehaviour
     float _spawnInterval = 0;
     int _random = default;
     float _time = 0;
-    private void Start()
-    {
-        
-    }
     private void Update()
     {
-        StageSpawner();
+        StageSpawner();//ステージの自動生成を行う関数
     }
-    public void StageSpawner()
+    void StageSpawner()
     {
         _time += Time.deltaTime;
         if (_time > _spawnInterval)
