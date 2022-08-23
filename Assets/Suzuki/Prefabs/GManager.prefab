@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3527280535723082766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645394590388943965}
+  - component: {fileID: 2338506223665952753}
+  m_Layer: 0
+  m_Name: sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1645394590388943965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527280535723082766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2201728250592543}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2338506223665952753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527280535723082766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd71f82073d7a4585e329b3b7b844f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  se:
+  - {fileID: 0}
+--- !u!1 &5711750906360021950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2201728250592543}
+  - component: {fileID: 6132712615580607570}
+  m_Layer: 0
+  m_Name: GManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2201728250592543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711750906360021950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8884964, y: -1.52392, z: 5.6234493}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1645394590388943965}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6132712615580607570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711750906360021950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff300f439fe67344aa6e042f821808e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runTimer: 0
+  gameScore: 0
+  houseTrg: 0
+  walktrg: 0
+  Coin: 0
+  bossbattletrg: 0
+  ESCtrg: 0
+  over: 0
+  setmenu: 0
+  txtget: 
+  EventNumber: 00000000
+  freenums:
+  - 0
+  pushtrg: 0
+  posX: 0
+  posY: 0
+  posZ: 0
+  setrg: -1
+  stageNumber: 1
+  audioMax: 0.16
+  mode: 1
+  isEnglish: 0
+  kando: 1
+  reduction: 0
+  autolongdash: 1
+  rotpivot: 5
+  subgameTrg: 0
+  subcharaTrg: 0
+  autoattack: 0
+  ItemID:
+  - itemname: 
+    itemscript: 
+    itemimage: {fileID: 0}
+    eventnumber: 0
+    itemprice: 0
+    itemnumber: 0
+    itemobj: {fileID: 0}
+    itemname2: 
+    itemscript2: 
+    gettrg: 0
+    rare: 
+    _equalsset: 0
+    pl_equalsselect: 0
+    _quickset: 0
+  P_equalsID:
+  - hand_equals: 0
+    accessory_equals: 0
+  Quick_itemSet: 00000000
+  _quickSelect: -1
+  MagicID:
+  - magicname: 
+    magicscript: 
+    magicimage: {fileID: 0}
+    magicprice: 0
+    itemobj: {fileID: 0}
+    magicobj: {fileID: 0}
+    gunmode: 
+    shotmaxtime: 0
+    inputmagicpower: 0
+    magicname2: 
+    magicscript2: 
+    inputeventnumber: 0
+    attacktype: 
+    attacktype2: 
+  itemselect: 0
+  Pstatus:
+  - pimage: {fileID: 0}
+    pname: 
+    pname2: 
+    pscript: 
+    pscript2: 
+    maxHP: 0
+    hp: 0
+    maxMP: 0
+    mp: 0
+    speed: 0
+    defense: 0
+    attack: 0
+    Lv: 0
+    maxExp: 0
+    inputExp: 0
+    inputskill: 
+    selectskill: 0
+    getMagic: []
+    magicselect: 0
+    magicSet: 
+    badtype: 
+    badtype2: 
+    attacktype: 
+    attacktype2: 
+    pobj: {fileID: 0}
+    loadtime: 0
+    maxload: 0
+    changemode: 0
+    getpl: 0
+    slskillID: 0
+  Pclone:
+  - maxHP: 0
+    hp: 0
+    maxMP: 0
+    mp: 0
+    speed: 0
+    defense: 0
+    attack: 0
+    Lv: 0
+    maxExp: 0
+    inputExp: 0
+  playerselect: 0
+  SkillID:
+  - skillname: 
+    skillname2: 
+    skillscript: 
+    skillscript2: 
+    skillmaxbar: 0
+    skillicon: {fileID: 0}
+    skillitem: {fileID: 0}
+    notrg: 0
+    inputskillobj: {fileID: 0}
+  skillselect: 0
+  skillsay: 
+  Sgetsay: 0
+  effectobj:
+  - {fileID: 0}
+  animmode: -1
+  Triggers: 00000000
+  SceneText: 
+  spawnUI: {fileID: 0}
+  skillnumber: -1
+  ase: {fileID: 0}
+  sayobjname: 
+  wheelMode: Magic
+  missionID:
+  - name: 
+    name2: 
+    script: 
+    script2: 
+    subtrg: 0
+    inputmission: 0
+    client: 
+    client2: 
+    clientimage: {fileID: 0}
+    inputitemid: 0
+    inputitemnumber: 0
+    getcoin: 0
+    getitemid: 0
+    getachievementsid: 0
+    getpl: 0
+    getsource: 
+    getsource2: 
+  achievementsID:
+  - name: 
+    name2: 
+    script: 
+    script2: 
+    gettrg: 0
+    image: {fileID: 0}
+  enemynoteID:
+  - name: 
+    name2: 
+    script: 
+    script2: 
+    inputhouse: 
+    inputhouse2: 
+    inputattacktype: 
+    inputattacktype2: 
+    inputbadtype: 
+    inputbadtype2: 
+    gettrg: 0
+    image: {fileID: 0}
+  mouseP: {x: 0, y: 0, z: 0}
+  stageName:
+  - 
+  stageName2:
+  - 
+  sunTime: 72
+  daycount: 0
+  mobDsTrg: 00000000
+  shopID: 00000000
+  stoneID: 00000000
+  itemMagicID: 0
+  villageName: 
+  storyUI: 
+  charaM:
+  - subM: []
+    useTrg: 0
+    mainpartsTrg: 0
+    usegage: 0
+    partsobj: {fileID: 0}
+    speed: 0
+    MaxHP: 0
+    HP: 0
+    MaxMP: 0
+    MP: 0
+    jump: 0
+    slImage: {fileID: 0}
+  hitcure: 0
+  colTrg: 00
+  managerSE:
+  - {fileID: 0}
+  _minigame:
+    input_indexTrg: 0
+    input_missionID: 00000000
+    set_itemScript:
+    - 
+    set_itemScript2:
+    - 
+  instantP:
+  - 0
+  _craftRecipe:
+  - recipeName: 
+    craftItem_id: 0
+    craftGet_number: 0
+    craftSub_id: 0
+    craftSub_number: 0
+    materialItem_id: 
+    materialSet_number: 
