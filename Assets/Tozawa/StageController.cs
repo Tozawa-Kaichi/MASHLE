@@ -26,19 +26,19 @@ public class StageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Œˆ‚ß‚ç‚ê‚½ƒ‰ƒCƒ“‚ğ’´‚¦‚½‚çÁ–Å
-        if (this.transform.position.x < _deathLineBorderofHorizon)
-        {
-            DestroyOverTheLine();
-        }
+        DestroyOverTheLine();
         //ˆÚ“®‚ğs‚¤ŠÖ”
         StageMove();
     }
-    void DestroyOverTheLine()
+    public void DestroyOverTheLine()
     {
-        Destroy(this.gameObject);
+        //Œˆ‚ß‚ç‚ê‚½ƒ‰ƒCƒ“‚ğ’´‚¦‚½‚çÁ–Å
+        if (this.transform.position.x < _deathLineBorderofHorizon)
+        {
+            Destroy(this.gameObject);
+        }
     }
-    void StageMove()
+    public void StageMove()
     {
         _rb.velocity = new Vector3(_stageSpeed * NEGATIVE_NUM,0);
     }
