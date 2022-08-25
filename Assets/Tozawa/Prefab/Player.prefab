@@ -213,7 +213,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2cd55a9fb75a8b141a2499bb417ea039, type: 2}
+  - {fileID: 2100000, guid: dd57fea2d38633a42be0ca58ae57c683, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -332,7 +332,7 @@ Transform:
   - {fileID: 2929872020429199184}
   - {fileID: 2929872020429199162}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &2929872020438988976
 Animator:
@@ -380,7 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67da842a62e88184c807233513eda279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _getItem: 0
 --- !u!1 &2929872020429490944
 GameObject:
   m_ObjectHideFlags: 0
