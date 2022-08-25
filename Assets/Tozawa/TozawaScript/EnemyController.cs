@@ -14,11 +14,12 @@ public class EnemyController : StageController
             StageMove();
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            Instantiate(_zakoDeathEffect,this.transform.position,Quaternion.identity);
+            Instantiate(_zakoDeathEffect, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

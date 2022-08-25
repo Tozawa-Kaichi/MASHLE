@@ -7,7 +7,7 @@ using Cinemachine;
 /// </summary>
 public class PlayerDashAnimController : MonoBehaviour
 {
-    [SerializeField] public static bool urtraDash = false;
+    public static bool urtraDash = false;
     Animator _anim = default;
     int combo = 0;
     float _animSpeedParam = 1;
@@ -37,10 +37,6 @@ public class PlayerDashAnimController : MonoBehaviour
         else
         {
             _playerState = PlayerState.NormalDash;
-        }
-        if(combo > 5)
-        {
-            urtraDash = true;
         }
     }
     void LateUpdate()
@@ -78,7 +74,6 @@ public class PlayerDashAnimController : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             _ccImpulse.GenerateImpulse();
-            combo += 1;
         }
         
     }
