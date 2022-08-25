@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deathLineBorderofHorizon: -13
-  _stageSpeed: 5.65
+  _stageSpeed: 6
 --- !u!54 &-6127710206343090171
 Rigidbody:
   m_ObjectHideFlags: 0
