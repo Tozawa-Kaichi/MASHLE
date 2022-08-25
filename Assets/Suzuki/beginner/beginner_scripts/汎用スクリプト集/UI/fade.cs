@@ -33,24 +33,26 @@ public class fade : MonoBehaviour
     void Update()
     {
         
-        FadeOutTime -= Time.deltaTime;
+        FadeOutTime += Time.deltaTime;
         if(FadeOutTime >0f && fademode==-1)
         {
-            alphacolor -= FadeOutTime;
+            alphacolor = FadeOutTime;
             imagecolor.color = new Color(1.0f, 1.0f, 1.0f, alphacolor);
             imagecolor = this.GetComponent<Image>();
         }
         else if((fademode==0 || fademode==1) && FadeOutTime < 1)
         {
-             alphacolor += FadeOutTime;
+             alphacolor = FadeOutTime;
             imagecolor.color = new Color(1.0f, 1.0f, 1.0f, alphacolor);
             imagecolor = this.GetComponent<Image>();
         }
         else if(FadeOutTime >= 1)
         {
             fademode = -1;
-           if(NextScene != "")
- SceneManager.LoadScene(NextScene);
+            if (NextScene != "")
+            {
+                SceneManager.LoadScene(NextScene);
+            }
         }
 
         

@@ -11,6 +11,7 @@ public class escDestory : MonoBehaviour
     public string animname;
     public float destroytime = 0.1f;
     bool inputon = false;
+    public bool single_esc_trg = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,28 @@ public class escDestory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inputon == true && inputUInumber == -1)
+        if (single_esc_trg && GManager.instance.ESCtrg)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || GManager.instance.ESCtrg == true)
+            GManager.instance.ESCtrg = false;
+            GManager.instance.setmenu = 0;
+            GManager.instance.walktrg = true;
+            if (mousetrg)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            Destroy(gameObject, destroytime);
+            //試験的にアンロード
+            Resources.UnloadUnusedAssets();
+            //-----------------
+            if (ui != null)
+            {
+                ui.Play(animname);
+            }
+        }
+        else if (inputon && inputUInumber == -1)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) || GManager.instance.ESCtrg)
             {
                 GManager.instance.ESCtrg = false;
                 PlayerPrefs.SetFloat("audioMax", GManager.instance.audioMax);
@@ -53,7 +73,7 @@ public class escDestory : MonoBehaviour
                     ui.Play(animname);
                 }
             }
-            else if (mouseesctrg == true)
+            else if (mouseesctrg)
             {
                 if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Return))
                 {
@@ -64,7 +84,7 @@ public class escDestory : MonoBehaviour
                     PlayerPrefs.Save();
                     GManager.instance.setmenu = 0;
                     GManager.instance.walktrg = true;
-                    if (mousetrg == true)
+                    if (mousetrg)
                     {
                         Cursor.lockState = CursorLockMode.Locked;
                         Cursor.visible = false;
@@ -80,9 +100,9 @@ public class escDestory : MonoBehaviour
                 }
             }
         }
-        else if(inputon == true && (inputUInumber + 1) > GManager.instance.setmenu)
+        else if (inputon && (inputUInumber + 1) > GManager.instance.setmenu)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || GManager.instance.ESCtrg == true)
+            if (Input.GetKeyDown(KeyCode.Escape) || GManager.instance.ESCtrg)
             {
                 PlayerPrefs.SetFloat("audioMax", GManager.instance.audioMax);
                 PlayerPrefs.SetInt("mode", GManager.instance.mode);
@@ -108,7 +128,7 @@ public class escDestory : MonoBehaviour
                 Resources.UnloadUnusedAssets();
                 //-----------------
             }
-            else if(mouseesctrg == true)
+            else if (mouseesctrg)
             {
                 if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Return))
                 {
