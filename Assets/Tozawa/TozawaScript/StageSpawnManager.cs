@@ -14,8 +14,14 @@ public class StageSpawnManager : MonoBehaviour
     float _spawnInterval = 0;
     int _random = default;
     float _time = 0;
+    //----------------------------------------------------------------
+    [SerializeField] float ULTRA_SPEED = 0.7f;
     private void Update()
     {
+        if(PlayerDashAnimController.urtraDash)
+        {
+            _spawnInterval = ULTRA_SPEED;
+        }
         StageSpawner();//ステージの自動生成を行う関数
     }
     void StageSpawner()

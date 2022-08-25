@@ -7,11 +7,12 @@ using Cinemachine;
 /// </summary>
 public class PlayerDashAnimController : MonoBehaviour
 {
+    [SerializeField] public static bool urtraDash = false;
     Animator _anim = default;
     int combo = 0;
     float _animSpeedParam = 1;
     PlayerState _playerState = default;
-    [SerializeField] bool _getItem = false;
+    
     CinemachineImpulseSource _ccImpulse;
     //-----------------------------------------
     const float NOMAL_SPEED = 3;
@@ -22,13 +23,14 @@ public class PlayerDashAnimController : MonoBehaviour
         _ccImpulse = GetComponent<CinemachineImpulseSource>();
         _anim = GetComponent<Animator>();
         _playerState = PlayerState.Non;
+        urtraDash = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         SpeedControle();
-        if(_getItem == true)
+        if(urtraDash == true)
         {
             _playerState = PlayerState.UltraDash;
         }
@@ -38,7 +40,7 @@ public class PlayerDashAnimController : MonoBehaviour
         }
         if(combo > 5)
         {
-            _getItem = true;
+            urtraDash = true;
         }
     }
     void LateUpdate()
@@ -72,7 +74,12 @@ public class PlayerDashAnimController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        combo += 1;
-        _ccImpulse.GenerateImpulse();
+        
+        if(collision.gameObject.tag == "Enemy")
+        {
+            _ccImpulse.GenerateImpulse();
+            combo += 1;
+        }
+        
     }
 }

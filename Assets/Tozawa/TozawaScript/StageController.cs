@@ -11,11 +11,13 @@ public class StageController : MonoBehaviour
     [Header("この部分を過ぎたら消滅するというX座標の値を調節してください"), Tooltip("ステージが消滅する座標"), SerializeField]
     int _deathLineBorderofHorizon = 0;
     [Header("ステージの移動速度を調整してください"), Tooltip("ステージの移動速度"), SerializeField]
-    float _stageSpeed = 0;
+    float _stageSpeed =3;
     Rigidbody _rb;//リジッドボディ格納変数
 
     //----------------------------------------------------------------
     const int NEGATIVE_NUM = -1;
+    const int NORMAL_SPEED = 3;
+    [SerializeField] const int ULTRA_SPEED = 6;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,14 @@ public class StageController : MonoBehaviour
         DestroyOverTheLine();
         //移動を行う関数
         StageMove();
+        if(PlayerDashAnimController.urtraDash)
+        {
+            _stageSpeed = ULTRA_SPEED;
+        }
+        else
+        {
+            _stageSpeed = NORMAL_SPEED;
+        }
     }
     public void DestroyOverTheLine()
     {
