@@ -16,7 +16,7 @@ public class qteID : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _q = GameObject.Find("qteUI").GetComponent<qteUI>();
+        _q = GameObject.Find("qteUI(Clone)").GetComponent<qteUI>();
     }
 
     // Update is called once per frame

@@ -70,6 +70,6 @@ public class GameManager : MonoBehaviour
     }
     void LoadScene()
     {
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene("BattleScene");
     }
 }
