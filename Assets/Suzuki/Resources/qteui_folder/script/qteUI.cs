@@ -68,7 +68,7 @@ public class qteUI : MonoBehaviour
         {
             pop_anim[1].gameObject.SetActive(true);
             pop_anim[1].SetInteger("Anumber", 2);
-            GManager.instance.ESCtrg = true;
+            Invoke("UIESC", 1);
             start_push = false;
             //upattack.text = "×" + atnumber.ToString ();
         }
@@ -78,6 +78,10 @@ public class qteUI : MonoBehaviour
             set_qteid[selectN].bt_anim.SetInteger("Anumber", 2);
         }
 
+    }
+    void UIESC ()
+    {
+        GManager.instance.ESCtrg = true;
     }
     void summonUI()
     {
