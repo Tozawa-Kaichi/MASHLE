@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Suzuki/Resources/qteui_folder/uitest.unity
+    guid: 644baf572d80df049b45312c2635744a
+  - enabled: 1
+    path: Assets/Tozawa/Scene/BattleScene.unity
+    guid: 91bcfb9b9332ff847a5fdd02a5134cdd
+  - enabled: 1
+    path: Assets/Tozawa/Scene/RunGameStage01.unity
+    guid: 20313a51c3d748f429d5bccbc66b5ad8
+  - enabled: 1
+    path: Assets/Tozawa/Scene/RunGameStage02.unity
+    guid: 7d4bf07c064d72b43b81f26c65b53617
+  - enabled: 1
+    path: Assets/Tozawa/Scene/RunGameStage03.unity
+    guid: e2bfb2397433d5b4eabfb9c3d649226b
+  - enabled: 1
+    path: Assets/Tozawa/Scene/RunGameStage04.unity
+    guid: 3e08a211bb44fc44c99f794b039a0ed1
+  - enabled: 1
+    path: Assets/Tozawa/Scene/RunGameStage05.unity
+    guid: 7093e42ab1975ad4db8b68b84e59f5ee
   m_configObjects: {}

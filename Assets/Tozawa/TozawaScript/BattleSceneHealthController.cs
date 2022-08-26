@@ -39,6 +39,7 @@ public class BattleSceneHealthController : MonoBehaviour
     Animator _bossAnim = default;
     Animator _playerAnim = default;
 
+    public static bool sAttackNow = false;
     //----------------------------
     const int SPECIAL_MAX = 100;
     // Start is called before the first frame update
@@ -51,15 +52,19 @@ public class BattleSceneHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_bossGameObject)
+        Debug.Log(sAttackNow);
+        if(!sAttackNow)
         {
-            BossAttack();
+            if (_bossGameObject)
+            {
+                BossAttack();
+            }
+            HpPreView();
+            SliderView();
+            DeathCheck();
+            AddSpecialGage();
         }
         
-        HpPreView();
-        SliderView();
-        DeathCheck();
-        AddSpecialGage();
     }
     void HpPreView()
     {
@@ -124,14 +129,20 @@ public class BattleSceneHealthController : MonoBehaviour
     {
         if(_powerOfSpecialGage == SPECIAL_MAX)
         {
-            _bossHealth -= _specialDamegeNum;
+            
             Instantiate(_specialAttackQTEPrefab);
             _powerOfSpecialGage = 0;
+            Invoke(nameof(LateDamage),5f);
+            
         }
+    }
+    void LateDamage()
+    {
+        _bossHealth -= _specialDamegeNum;
     }
         
     void LoadScene()
     {
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene("uitest");
     }
 }

@@ -785,7 +785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35148
+  m_Name: pb_Mesh75856
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1015,7 +1015,7 @@ PrefabInstance:
     - target: {fileID: 2929872020438988976, guid: 13da7c06fdd927341a74d0ea7ea1e9fa, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 4b1fefdc8f443414fa40406bdfe58f9e, type: 2}
     - target: {fileID: 2929872020438988976, guid: 13da7c06fdd927341a74d0ea7ea1e9fa, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -1782,7 +1782,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35324
+  m_Name: pb_Mesh76076
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2606,7 +2606,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35172
+  m_Name: pb_Mesh75880
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3043,7 +3043,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35294
+  m_Name: pb_Mesh76028
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3298,6 +3298,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 890417040}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: NormalAttack
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &880413453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3339,6 +3351,11 @@ CanvasRenderer:
 --- !u!1 &890417039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2929872020429490908, guid: 13da7c06fdd927341a74d0ea7ea1e9fa, type: 3}
+  m_PrefabInstance: {fileID: 146018219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &890417040 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2929872020438988976, guid: 13da7c06fdd927341a74d0ea7ea1e9fa, type: 3}
   m_PrefabInstance: {fileID: 146018219}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &953307712
@@ -5520,7 +5537,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35110
+  m_Name: pb_Mesh75794
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -6205,6 +6222,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 890417040}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MiddleAttack
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1967992056

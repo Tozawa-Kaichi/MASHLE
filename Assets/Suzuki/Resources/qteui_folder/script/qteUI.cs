@@ -49,6 +49,7 @@ public class qteUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BattleSceneHealthController.sAttackNow = true;
         audio_s = this.GetComponent<AudioSource>();
         set_qte = new GameObject[qte_number];
         set_qteid = new qteID[qte_number];
@@ -82,6 +83,7 @@ public class qteUI : MonoBehaviour
     }
     void UIESC ()
     {
+        BattleSceneHealthController.sAttackNow = false;
         GManager.instance.ESCtrg = true;
     }
     void summonUI()
