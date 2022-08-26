@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class qteUI : MonoBehaviour
 {
+    //QTEっぽいUI
     [Header("【QTEより簡単に作れるUI】\n-動かすテキストのアニメーションをセット"), SerializeField]
     Animator[] pop_anim;
     public Text upattack;

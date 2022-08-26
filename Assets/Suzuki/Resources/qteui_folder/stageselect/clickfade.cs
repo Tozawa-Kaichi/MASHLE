@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class clickfade : MonoBehaviour
 {
+    //ステージセレクトから指定シーンへ飛ぶ
     [Header("フェードUIをセット"),SerializeField]
     GameObject fadein;
     [Header("UIのaudiosourceをセット※必須ではない"), SerializeField]
