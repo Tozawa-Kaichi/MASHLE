@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _onGameOver.Invoke();
-        Invoke(nameof(LoadScene) ,5f);
+        Invoke(nameof(LoadSceneGameOver) ,5f);
     }
     public void GameClear()
     {
@@ -71,5 +71,9 @@ public class GameManager : MonoBehaviour
     void LoadScene()
     {
         SceneManager.LoadScene("BattleScene");
+    }
+    void LoadSceneGameOver()
+    {
+        SceneManager.LoadScene("uitest");
     }
 }
