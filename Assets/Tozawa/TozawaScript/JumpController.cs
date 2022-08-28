@@ -36,7 +36,7 @@ public class JumpController : MonoBehaviour
         // 垂直方向の速度を保持しながら、入力した方向へ動かす
         float verticalVelocity = _rb.velocity.y;
         _rb.velocity = _dir.normalized + Vector3.up * verticalVelocity;
-
+        IsGrounded();
         // ジャンプ処理
         if (Input.GetButtonDown("Jump") && (IsGrounded() || _jumpCount < _maxJumpCount))
         {
@@ -47,7 +47,7 @@ public class JumpController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        IsGrounded();
+        
     }
     
     Vector3 GetGroundedAreaCenter()

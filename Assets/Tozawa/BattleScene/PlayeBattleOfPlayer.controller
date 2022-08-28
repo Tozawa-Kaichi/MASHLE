@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NormalAttack
+  m_Name: kormalAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -123,16 +123,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5449003566102792246}
-    m_Position: {x: 330, y: 150, z: 0}
+    m_Position: {x: 350, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -879403104215712892}
     m_Position: {x: 530, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5769686034888992146}
-    m_Position: {x: 620, y: 140, z: 0}
+    m_Position: {x: 820, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7977481188312748969}
-    m_Position: {x: 540, y: 230, z: 0}
+    m_Position: {x: 640, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
